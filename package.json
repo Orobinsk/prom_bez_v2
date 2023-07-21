@@ -10,6 +10,7 @@
     "@types/node": "^16.18.38",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
+    "eslint": "8.22.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -39,5 +40,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "@types/react-router-dom": "^5.3.3",
+    "react-redux": "^8.1.1",
+    "react-router-dom": "^6.14.2",
+    "sass": "^1.63.6"
   }
 }

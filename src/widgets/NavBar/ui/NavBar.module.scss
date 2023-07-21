@@ -1,0 +1,17 @@
+.NavBar {
+  width: 100%;
+  height: var(--navbar-height);
+  background: var(--primary-color);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: var(--bg-color);
+}
+
+.links {
+  margin-left: auto;
+}
+
+.home{
+  font-size: var(--font-size-l);
+}
