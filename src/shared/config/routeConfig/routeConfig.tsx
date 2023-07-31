@@ -1,7 +1,7 @@
 import {RouteProps} from "react-router-dom";
 import {LearnPage} from "../../../pages/learnPage";
-import {HomePage} from "../../../pages/home";
-import {NotFoundPage} from "../../../pages/notFound";
+import {MainPage} from "../../../pages/MainPage";
+import {NotFoundPage} from "../../../pages/NotFoundPage";
 
 
 
@@ -23,7 +23,7 @@ export const RoutePatch: Record<AppRoute, string> = {
 export const routeConfig: Record<AppRoute, RouteProps> = {
     [AppRoute.MAIN]: {
         path: RoutePatch.main,
-        element: <HomePage />,
+        element: <MainPage />,
     },
     // [AppRoute.ABOUT]: {
     //     path: RoutePatch.about,
