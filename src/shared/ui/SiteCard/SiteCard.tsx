@@ -2,6 +2,7 @@ import cls from './SiteCard.module.scss'
 import {classNames} from "../../lib/classNames/classNames";
 import {FC, ReactNode} from "react";
 import {Link, LinkProps} from "react-router-dom";
+import {AppLink} from "../AppLink/AppLink";
 
 interface SiteCardProps extends LinkProps {
     className?: string;
@@ -17,16 +18,15 @@ export const SiteCard: FC<SiteCardProps> = (props) => {
 
 
     return (
-        // <div className={classNames(cls.SiteCard, className)}>
-            <Link
+        <div className={classNames(cls.SiteCard, className)}>
+            <AppLink
+                className={className}
                 to={to}
                 {...otherProps}
             >
-                <div className={classNames(cls.SiteCard, className)}>
-                    {children}
-                </div>
-            </Link>
-         // </div>
+                {children}
+            </AppLink>
+        </div>
     );
 };
 

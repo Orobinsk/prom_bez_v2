@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
         <NavBar />
-        <div  className="content-page">
+        <div className="content-page">
             <AppRouter />
         </div>
     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import {SiteCard} from "../../../shared/ui/SiteCard/SiteCard";
 import {ReactComponent as IconA1} from '../../../shared/assets/icons/iconA1.svg'
 import {RoutePatch} from "../../../shared/config/routeConfig/routeConfig";
-import cls from './MainPage.module.scss'
+import cls from './MainPage.module.css'
 
 const MainPage = () => {
     return (
@@ -13,7 +13,6 @@ const MainPage = () => {
                     <IconA1/>
                     <span>A.1 Общие требования по промышленной безопасности</span>
                 </SiteCard>
-
                 <SiteCard to={RoutePatch.learn}>
                     <IconA1/>
                     <span>A.1 Общие требования по промышленной безопасности</span>
@@ -25,8 +24,7 @@ const MainPage = () => {
                 <span>A.1 Общие требования по промышленной безопасности</span>
             </SiteCard>
             </div>
-
-        </div>
+          </div>
     );
 };
 

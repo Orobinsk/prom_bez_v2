@@ -1,20 +1,22 @@
 import React from 'react';
-import cls from "./NavBar.module.scss"
+import cls from "./NavBar.module.css"
 import {Button} from "../../../shared/ui/Button/Button";
 import {classNames} from "../../../shared/lib/classNames/classNames";
+import {Link} from "react-router-dom";
+import {RoutePatch} from "../../../shared/config/routeConfig/routeConfig";
+import {AppLink} from "../../../shared/ui/AppLink/AppLink";
 
-interface NavBarProps{
+interface NavBarProps {
     className?: string | undefined;
 }
-const consolTest =(e: React.MouseEvent)=>{
-    console.log('test')
-}
 
-const NavBar = ({ className }:NavBarProps) => {
+const NavBar = ({className}: NavBarProps) => {
     return (
-        <div className={classNames(cls.NavBar)}>
-            <Button onClick={consolTest} className={cls.home}>Промышленная безопасность</Button>
-            <Button className={cls.links}>Войти</Button>
+        <div className={classNames(cls.NavBar, className)}>
+            <Button className={cls.home}>Промышленная безопасность</Button>
+            <Button className={cls.login}>
+                <AppLink to={RoutePatch.login} className={cls.links}>Войти</AppLink>
+            </Button>
         </div>
     );
 };
