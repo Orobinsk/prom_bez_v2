@@ -1,7 +1,7 @@
 import cls from './SiteCard.module.scss'
 import {classNames} from "../../lib/classNames/classNames";
-import {FC, ReactNode} from "react";
-import {Link, LinkProps} from "react-router-dom";
+import {FC} from "react";
+import {LinkProps} from "react-router-dom";
 import {AppLink} from "../AppLink/AppLink";
 
 interface SiteCardProps extends LinkProps {

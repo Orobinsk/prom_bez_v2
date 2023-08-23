@@ -12,7 +12,8 @@ interface NavBarProps {
 const NavBar = ({className}: NavBarProps) => {
     return (
         <div className={classNames(cls.NavBar, className)}>
-            <Button className={cls.home}>Промышленная безопасность</Button>
+            <Button className={cls.home}>
+                <AppLink to={RoutePatch.main} className={cls.links}>Промышленная безопасность</AppLink></Button>
             <Button className={cls.login}>
                 <AppLink to={RoutePatch.login} className={cls.links}>Войти</AppLink>
             </Button>

@@ -15,3 +15,6 @@
 .home{
   font-size: var(--font-size-l);
 }
+.links{
+  color: var(--bg-color);
+}
