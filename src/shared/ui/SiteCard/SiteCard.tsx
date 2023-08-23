@@ -5,7 +5,7 @@ import {Link, LinkProps} from "react-router-dom";
 import {AppLink} from "../AppLink/AppLink";
 
 interface SiteCardProps extends LinkProps {
-    className?: string;
+    className?: string | undefined;
 }
 
 export const SiteCard: FC<SiteCardProps> = (props) => {
@@ -20,7 +20,7 @@ export const SiteCard: FC<SiteCardProps> = (props) => {
     return (
         <div className={classNames(cls.SiteCard, className)}>
             <AppLink
-                className={className}
+                className={cls.link}
                 to={to}
                 {...otherProps}
             >

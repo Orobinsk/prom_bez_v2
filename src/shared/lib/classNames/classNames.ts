@@ -1,6 +1,7 @@
 export function classNames(
     cls: string,
-    additional?: string | undefined
+    additional?: string
 ): string {
     return additional ? `${cls} ${additional}` : cls;
+
 }

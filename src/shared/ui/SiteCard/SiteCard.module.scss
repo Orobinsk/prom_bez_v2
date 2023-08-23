@@ -1,17 +1,15 @@
 .SiteCard {
   background: var(--secondary-color);
   border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding:10px;
-  color: var(--primary-text);
+
+  //margin:10px;
 }
 
 .SiteCard:hover{
   background: var(--primary-color);
 }
 
-.text{
-  color: var(--primary-text);
- }
+.link{
+  padding: 5px;
+  text-align: center;
+}

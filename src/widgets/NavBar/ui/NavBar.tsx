@@ -2,7 +2,6 @@ import React from 'react';
 import cls from "./NavBar.module.css"
 import {Button} from "../../../shared/ui/Button/Button";
 import {classNames} from "../../../shared/lib/classNames/classNames";
-import {Link} from "react-router-dom";
 import {RoutePatch} from "../../../shared/config/routeConfig/routeConfig";
 import {AppLink} from "../../../shared/ui/AppLink/AppLink";
 

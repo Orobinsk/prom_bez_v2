@@ -7,9 +7,8 @@ import cls from './MainPage.module.css'
 const MainPage = () => {
     return (
         <div>
-            home pages
             <div className={cls.sideCards}>
-                <SiteCard to={RoutePatch.learn}>
+                <SiteCard to={RoutePatch.learn} >
                     <IconA1/>
                     <span>A.1 Общие требования по промышленной безопасности</span>
                 </SiteCard>
