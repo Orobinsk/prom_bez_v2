@@ -4,16 +4,17 @@ import './app/styles/index.scss';
 
 import App from "./app/App";
 import {BrowserRouter} from 'react-router-dom';
+import {StoreProvider} from "./app/providers/StoreProvider";
 
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-     // <Provider store={Store} >
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>
-    // </Provider>
+     <StoreProvider>
+         <BrowserRouter>
+             <App />
+         </BrowserRouter>
+     </StoreProvider>
 );
 
