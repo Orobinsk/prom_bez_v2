@@ -1,6 +1,6 @@
 import React from 'react';
 import cls from './LoginPage.module.css'
-import {LoginForm} from "../../../features/AithByUsername";
+import {LoginForm} from "../../../features/AuthByUsername";
 
 
 

@@ -11,6 +11,7 @@ import {getLoginError} from "../../model/selectors/getLoginError/getLoginError";
 import {getLoginLoading} from "../../model/selectors/getLoginloading/getLoginLoading";
 import {loginByUsername} from "../../model/services/loginByUsername/loginByUsername";
 import {loginActions} from "../../model/slice/loginSlice";
+import {useNavigate} from "react-router-dom";
 
 export interface LoginFormProps {
     className?: string;
@@ -24,6 +25,7 @@ const LoginForm = ({className}: LoginFormProps) => {
     const password = useSelector(getLoginPassword);
     const isLoading = useSelector(getLoginLoading);
     const error = useSelector(getLoginError);
+    const navigate=useNavigate()
 
     const onChangeUsername = useCallback((value: string) => {
         dispatch(loginActions.setUsername(value));
@@ -36,11 +38,13 @@ const LoginForm = ({className}: LoginFormProps) => {
     const onLoginClick = useCallback(async () => {
         const result = await dispatch(loginByUsername({ username, password }));
         if (result.meta.requestStatus === 'fulfilled') {
-
+            navigate('/')
         }
-    }, [dispatch, password, username]);
+    }, [password, username]);
+
     return (
         <div className={classNames(cls.LoginForm, className)}>
+            {error && <h3 className={cls.error}>Неверный логин или пароль</h3> }
             <Input
                 placeholder={"Логин"}
                 onChange={onChangeUsername}
@@ -54,6 +58,7 @@ const LoginForm = ({className}: LoginFormProps) => {
             />
             <Button
                 onClick={onLoginClick}
+                className={cls.btn}
             >
                 login
             </Button>

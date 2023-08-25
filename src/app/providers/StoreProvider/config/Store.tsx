@@ -2,7 +2,7 @@ import {configureStore, ReducersMapObject} from "@reduxjs/toolkit";
 import {createReducerManager} from "./reducerManager";
 import {StateSchema} from "./StateSchema";
 import {userReducer} from "../../../../entities/User/model/slice/useSlice";
-import {loginReducer} from "../../../../features/AithByUsername/model/slice/loginSlice";
+import {loginReducer} from "../../../../features/AuthByUsername/model/slice/loginSlice";
 
 
 export function createReduxStore(

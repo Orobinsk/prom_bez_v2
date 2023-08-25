@@ -10,6 +10,7 @@
 
 .login {
   margin-left: auto;
+  color: var(--bg-color);
 }
 
 .home{
