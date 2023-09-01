@@ -5,7 +5,7 @@ import {RoutePatch} from "../../../shared/config/routeConfig/routeConfig";
 const SectionsPage = () => {
     return (
         <div>
-            SectionPage
+            Sections Page
 <SiteCard to={RoutePatch.learn}>
     side card
 </SiteCard>

@@ -1,4 +1,4 @@
-import LearnPage from "./ui/LearnPage";
+import LearnPageAsync from "./ui/LearnPage.async";
 
 
-export { LearnPage};
+export {LearnPageAsync};

@@ -1,18 +1,18 @@
 import {RouteProps} from "react-router-dom";
-import {LearnPage} from "../../../pages/learnPage";
-import {MainPage} from "../../../pages/MainPage";
+import {LoginPageAsync} from "../../../pages/LoginPage";
 import {NotFoundPage} from "../../../pages/NotFoundPage";
-import {LoginPage} from "../../../pages/LoginPage";
-
-
+import {MainPageAsync} from "../../../pages/MainPage";
+import {LearnPageAsync} from "../../../pages/learnPage";
+import {SectionsPageAsync} from "../../../pages/SectionsPage";
 
 
 export enum AppRoute {
     MAIN = 'main',
     // ABOUT = 'about',
-    LEARN_PAGE='learn',
-    NOT_FOUND = 'not_found',
+    LEARN_PAGE = 'learn',
     LOGIN = 'login',
+    SECTIONS = 'sections',
+    NOT_FOUND = 'not_found',
 }
 
 export const RoutePatch: Record<AppRoute, string> = {
@@ -20,6 +20,7 @@ export const RoutePatch: Record<AppRoute, string> = {
     // [AppRoute.ABOUT]: '/about',
     [AppRoute.LEARN_PAGE]: '/learn',
     [AppRoute.LOGIN]: '/login',
+    [AppRoute.SECTIONS]: '/sections',
     // последний
     [AppRoute.NOT_FOUND]: '*',
 };
@@ -27,7 +28,7 @@ export const RoutePatch: Record<AppRoute, string> = {
 export const routeConfig: Record<AppRoute, RouteProps> = {
     [AppRoute.MAIN]: {
         path: RoutePatch.main,
-        element: <MainPage />,
+        element: <MainPageAsync/>,
     },
     // [AppRoute.ABOUT]: {
     //     path: RoutePatch.about,
@@ -35,14 +36,18 @@ export const routeConfig: Record<AppRoute, RouteProps> = {
     // },
     [AppRoute.LEARN_PAGE]: {
         path: RoutePatch.learn,
-        element: <LearnPage />,
+        element: <LearnPageAsync/>,
     },
     [AppRoute.LOGIN]: {
         path: RoutePatch.login,
-        element: <LoginPage/>,
+        element: <LoginPageAsync/>,
+    },
+    [AppRoute.SECTIONS]: {
+        path: RoutePatch.sections,
+        element: <SectionsPageAsync/>,
     },
     [AppRoute.NOT_FOUND]: {
         path: RoutePatch.not_found,
-        element: <NotFoundPage />,
+        element: <NotFoundPage/>,
     },
 };

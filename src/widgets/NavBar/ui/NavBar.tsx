@@ -1,5 +1,5 @@
 import React, {useCallback} from 'react';
-import cls from "./NavBar.module.css"
+import cls from "./NavBar.module.scss"
 import {Button} from "../../../shared/ui/Button/Button";
 import {classNames} from "../../../shared/lib/classNames/classNames";
 import {RoutePatch} from "../../../shared/config/routeConfig/routeConfig";

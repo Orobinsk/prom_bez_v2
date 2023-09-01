@@ -16,6 +16,20 @@ body {
 }
 
 .page-wrapper {
-  flex-grow: 1;
-  padding: 20px;
+  padding: 20px 0 20px 0;
+  margin: auto;
+  @media screen and (min-width: 700px) {
+    max-width: 640px;
+  }
+  @media screen and (min-width: 1024px) {
+    max-width: 960px;
+  }
+  @media screen and (min-width: 1340px) {
+    max-width: 1250px;
+  }
 }
+
+
+
+
+

@@ -1,3 +1,3 @@
-import SectionsPage from './ui/SectionsPage'
+import SectionsPageAsync from './ui/SectionsPage.async'
 
-export {SectionsPage}
+export {SectionsPageAsync}
