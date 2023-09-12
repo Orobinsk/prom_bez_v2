@@ -14,8 +14,12 @@
 }
 
 .home{
-  font-size: var(--font-size-l);
+  font: var(--font-m);
+  @media screen and (min-width: 700px) {
+    font: var(--font-l);
+  }
 }
+
 .links{
   color: var(--bg-color);
 }

@@ -3,6 +3,7 @@ import {createReducerManager} from "./reducerManager";
 import {StateSchema} from "./StateSchema";
 import {userReducer} from "../../../../entities/User/model/slice/useSlice";
 import {loginReducer} from "../../../../features/AuthByUsername/model/slice/loginSlice";
+import {questionsReducer} from "../../../../entities/Questions";
 
 
 export function createReduxStore(
@@ -13,6 +14,7 @@ export function createReduxStore(
         // ...asyncReducers,
         user: userReducer,
         loginForm:loginReducer,
+        questions:questionsReducer,
     };
 
     const reducerManager = createReducerManager(rootReducers);

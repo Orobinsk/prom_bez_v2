@@ -5,7 +5,7 @@ import {classNames} from "../../../shared/lib/classNames/classNames";
 import {RoutePatch} from "../../../shared/config/routeConfig/routeConfig";
 import {AppLink} from "../../../shared/ui/AppLink/AppLink";
 import {useDispatch, useSelector} from "react-redux";
-import {getUserAuthData} from "../../../entities/User/model/selectors/getUserAuthData/getUserAuthData";
+import {getUserAuthData} from "../../../entities/User/model";
 import {useNavigate} from "react-router-dom";
 import {userActions} from "../../../entities/User/model/slice/useSlice";
 
